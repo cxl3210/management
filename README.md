@@ -2,7 +2,8 @@
 var Alexa = require("alexa-sdk");
 
 var date =[
-    {"year":"1912","event":"Founder, Tokuji Hayakawa, invents the Tokubijo snap buckle and acquires utility model design patent. Establishes metalworking shop in Matsui-cho, Honjo-ku, Tokyo (now Shin-ohashi, Koto-ku, Tokyo) on September 15. "},{"year":"1914","event":"Moves to Hayashi-cho, Honjo-ku, Tokyo (now Tachikawa, Sumida-ku, Tokyo). Installs one-horsepower electric motor. "},
+    {"year":"1912","event":"Founder, Tokuji Hayakawa, invents the Tokubijo snap buckle and acquires utility model design patent. Establishes metalworking shop in Matsui-cho, Honjo-ku, Tokyo (now Shin-ohashi, Koto-ku, Tokyo) on September 15. "},
+    {"year":"1914","event":"Moves to Hayashi-cho, Honjo-ku, Tokyo (now Tachikawa, Sumida-ku, Tokyo). Installs one-horsepower electric motor. "},
     {"year":"1915","event":"Invents Hayakawa Mechanical Pencil and begins export to the US and Europe. Establishes Hayakawa Brothers Shokai. "},
     {"year":"1920","event":"Establishes branch factory in Oshiage, Tokyo (now Yahiro, Sumida-ku, Tokyo). "},
     {"year":"1923","event":"All factories destroyed during Great Kanto Earthquake. Dissolves Hayakawa Brothers Shokai and relocates to Osaka. "},
@@ -75,9 +76,7 @@ var date =[
     {"year":"2000","event":"Launches advertising campaign for AQUOS, calling it a TV for the 21st century. Establishes Sharp Microelectronics of China (Shanghai) Co., Ltd. (SMC) as sales base in China (name changed to Sharp Electronics [Shanghai] Co., Ltd. [SES] in 2003). Establishes Sharp Business Systems (India) Limited (SBI) as sales base in India. Becomes world’s largest manufacturer of solar cells. Maintains this position for seven consecutive years, until 2006. "},
     {"year":"2001","event":"Releases TVs with Advanced Super View LCD. Establishes S.I. Solutions jointly with IBM Japan. Kansai Recycling Systems Co., Ltd. starts operations (established in 1999). Establishes Sharp Telecommunications of Europe, Ltd. (STE) as mobile telecommunications development base in the UK. Establishes usability labs. Establishes Comprehensive Call Centers (Customer Assistance Centers) for handling customer inquiries. Establishes BRM (business risk management) Committee. "},
     {"year":"2002","event":"Ties up with El-Araby Group for air conditioning business in Egypt. Operations begin at Mihara Plant. Develops 3D LCD that can be switched between 2D and 3D formats. "},
-    {"year":"2003","event":"Revises Sharp Business Standards and Action Guidelines, enacts Sharp Charter of Corporate Behavior. Launches Sharp Green Club (SGC). SEMEX in Mexico begins production of AQUOS LCD TVs. Establishes consumer electronics R&D center in China. Constructs Mie Plant No. 3 to manufacture System LCDs. Changes name of small-group activities to R-CATS and starts unique activities. Establishes CSR Promotion Division. Develops reflective or transmissive Mobile Advanced Super View LCD."},
-    // {"year":"2003","event":"Revises Sharp Business Standards and Action Guidelines; enacts Sharp Charter of Corporate Behavior."},
-    // {"year":"2003","event":"Revises Sharp Business Standards and Action Guidelines; enacts Sharp Charter of Corporate Behavior. Launches Sharp Green Club (SGC). SEMEX in Mexico begins production of AQUOS LCD TVs. Establishes consumer electronics R&D center in China. Constructs Mie Plant No. 3 to manufacture System LCDs. Changes name of small-group activities to R-CATS and starts unique activities. Establishes CSR Promotion Division. Develops reflective/transmissive Mobile Advanced Super View LCD. "},
+    {"year":"2003","event":"Revises Sharp Business Standards and Action Guidelines, enacts Sharp Charter of Corporate Behavior. Launches Sharp Green Club (SGC). SEMEX in Mexico begins production of AQUOS LCD TVs. Establishes consumer electronics R and D center in China. Constructs Mie Plant No. 3 to manufacture System LCDs. Changes name of small-group activities to R-CATS and starts unique activities. Establishes CSR Promotion Division. Develops reflective or transmissive Mobile Advanced Super View LCD."},
     {"year":"2004","event":"Starts eS-SEM strategic management system. Operations begin at Kameyama Plant. Establishes Sharp Technical Components (Wuxi) Co., Ltd. as manufacturing base in China. Opens AQUOS Plaza sites in Tokyo, Nagoya, and Osaka for the repair of large-screen AQUOS LCD TVs. Announces environmental vision of becoming a zero global warming impact company by 2010 (achieved in 2008). "},
     {"year":"2005","event":"Takes part in Team Minus 6%, Cool Biz, and Warm Biz, three initiatives of Japan’s Ministry of the Environment. Establishes Sharp Electronics Sales (China) Co., Ltd. (SESC) as sales base in China. Launches Sharp Yonago Corporation. Establishes Sharp Manufacturing (Thailand) Co., Ltd. (SMTL) as manufacturing base in Thailand (reorganization of STTM). Establishes Sharp Group Charter of Corporate Behavior and Sharp Code of Conduct. Electronic calculators recognized as IEEE Milestone. "},
     {"year":"2006","event":"Establishes Sharp Manufacturing Poland Sp. z o.o. (SMPL) as manufacturing base in Poland. Kameyama Plant wins the Economy, Trade and Industry Minister’s Prize in the 8th Japan Water Award. Teams up with NPO Weathercaster Network to begin eco-education in elementary schools in Japan. "},
@@ -90,8 +89,7 @@ var date =[
     {"year":"2013","event":"Reorganizes Japanese domestic sales companies: establishes Sharp Business Solutions Corporation (SBS) to handle B2B sales; changes name of solar and energy-related sales company to Sharp Energy Solutions Corporation (SESJ). Strengthens alliance with Samsung Electronics Co., Ltd. in LCD business and forms capital alliance with its Japanese subsidiary Samsung Electronics Japan Co., Ltd.. Crystal Clear Solar, a joint venture of Sharp and Fuyo General Lease Co., Ltd., starts operation of solar power plants in Osaka and several other locations in Japan. Starts production of IGZO LCD panels for notebook PCs. Construction completed on solar power plant in Thailand. Executive Vice President Kozo Takashi named president; Takashi Okuda named chairman. Enters into LED and laser diode patent cross-licensing agreement with OSRAM GmbH. Starts operations of new home appliance plant in Karawang, Indonesia. Enters into collaborative partnership with Denso Corporation, forms capital alliances with Makita Corporation and Lixil Corporation, and issues new shares through third-party allotment with the three companies. Increases capital through public stock offering. "},
     {"year":"2014","event":"50th anniversary since releasing the first calculator in Japan. Develops Free-Form Display that enables the creation of new display designs to match a variety of applications. 14-Inch TFT-LCD Recognized as IEEE Milestone. Opens multipurpose space for solution proposals at ;ABENO HARUKAS (Abeno-ku, Osaka), the tallest building complex in Japan. "},
     {"year":"2015","event":"Representative Director and Executive Vice President Shigeaki Mizushima named chairman. Issuance of Class Shares by third party allotment to Mizuho Bank Ltd., The Bank of Tokyo-Mitsubishi UFJ. Ltd., and Japan Industrial Solutions. New FFD (Free Form Display) technology developed allowing designers to integrate a display of virtually any shape into their products. Crystal Clear Solar, a joint venture of Sharp and Fuyo General Lease Co., Ltd., expands operation area of solar power plants to Hokkaido and other locations in Japan. Industry first products such as AQUOS 4K NEXT' 4K LCD TV realizing 8K equivalent display, 'Healsio Hotcook' and 'DC Hybrid Air Conditioner' introduced. "},
-    {"year":"2016","event":"World's first Plasmacluster Air Purifier with Mosquito catcher without using chemicals introduced to Japanese market (introduced to ASEAN market in September 2015). Announces strategic alliance with Hon Hai Precision Industry Co., Ltd.. Reassignment to 2nd Section from 1st Section of Tokyo Stock Exchange. Head office relocated from Osaka City (22-22, Nagaike-cho, Abeno-ku, Osaka City) to Sakai City (1 Takumi-cho, Sakai-ku, Sakai City). Sharp's shares of 388.8 billion yen in total subscribed to Hon Hai Precision Industry Co., Ltd. and 3 others. J.W. Tai (Executive V.P. of Hon Hai Precision Ind. Co., Ltd.) named president. "},
-    {"year":"2017","event":"Revises Sharp Business Standards and Action Guidelines, enacts Sharp Charter of Corporate Behavior. Launches Sharp Green Club (SGC). SEMEX in Mexico begins production of AQUOS LCD TVs. Establishes consumer electronics R and D center in China. Constructs Mie Plant No. 3 to manufacture System LCDs. Changes name of small-group activities to R-CATS and starts unique activities. Establishes CSR Promotion Division. Develops reflective or transmissive Mobile Advanced Super View LCD."}
+    {"year":"2016","event":"World's first Plasmacluster Air Purifier with Mosquito catcher without using chemicals introduced to Japanese market (introduced to ASEAN market in September 2015). Announces strategic alliance with Hon Hai Precision Industry Co., Ltd.. Reassignment to 2nd Section from 1st Section of Tokyo Stock Exchange. Head office relocated from Osaka City (22-22, Nagaike-cho, Abeno-ku, Osaka City) to Sakai City (1 Takumi-cho, Sakai-ku, Sakai City). Sharp's shares of 388.8 billion yen in total subscribed to Hon Hai Precision Industry Co., Ltd. and 3 others. J.W. Tai (Executive V.P. of Hon Hai Precision Ind. Co., Ltd.) named president. "}
 ];
 exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
@@ -131,14 +129,22 @@ var dateOne=function(){
         dataTwo:function(){
             var intent=this.event.request.intent.slots.data.value;
             var eventOne;
+            var aa;
             for(var i=0 ; i<date.length;i++){
                 if(intent==date[i].year){
-                    // this.emit(":tell",date[i].event);
                     eventOne = date[i].event;
-                    console.log('bhh:'+eventOne);
+                    aa="01";
                     break;
                 }
-            }
+                aa = "00";
+            };
+            
+            
+            if(aa == "00"){
+                eventOne ="there is no answer.";
+            };
+            
+            
             this.emit(":ask",eventOne,"you can say other data");
         }
         
